@@ -29,12 +29,6 @@
                     </div>
                 </li>
                 <li sec:authorize="hasRole('ROLE_ADMIN')">
-                    <a class="J_menuItem" th:href="@{/admin/class/list}" title="班级管理">
-                        <i class="fa fa-commenting"></i>
-                        <span class="nav-label">班级管理</span>
-                    </a>
-                </li>
-                <li sec:authorize="hasRole('ROLE_ADMIN')">
                     <a class="J_menuItem" th:href="@{/admin/teacher/list}" title="教师管理">
                         <i class="fa fa-male"></i>
                         <span class="nav-label">教师管理</span>
@@ -47,69 +41,45 @@
                     </a>
                 </li>
                 <li sec:authorize="hasRole('ROLE_ADMIN')">
-                    <a class="J_menuItem" th:href="@{/admin/chapter/list}" title="学科章节管理">
-                        <i class="fa fa-file-text-o"></i>
-                        <span class="nav-label">学科章节管理</span>
-                    </a>
-                </li>
-                <li sec:authorize="hasRole('ROLE_ADMIN')">
                     <a class="J_menuItem" th:href="@{/admin/question/list}" title="习题管理">
                         <i class="fa fa-clone"></i>
                         <span class="nav-label">习题管理</span>
                     </a>
                 </li>
                 <li sec:authorize="hasRole('ROLE_STUDENT')">
-                    <a class="J_menuItem" th:href="@{/admin/preLesson/listChapter}" title="章节预习">
+                    <a class="J_menuItem" th:href="@{/admin/preLesson/listChapter}" title="我的考试">
                         <i class="fa fa-feed"></i>
-                        <span class="nav-label">章节预习</span>
+                        <span class="nav-label">我的考试</span>
                     </a>
                 </li>
                 <li sec:authorize="hasRole('ROLE_STUDENT')">
-                    <a href="#" title="自我测验">
-                        <i class="fa fa-book"></i>
-                        <span class="nav-label">自我测验</span>
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a class="J_menuItem" th:href="@{/admin/selfExam/choose}">开始自测</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" th:href="@{/admin/selfExam/list}" href="#">自测结果</a>
-                        </li>
-                    </ul>
-                </li>
-                <li sec:authorize="hasRole('ROLE_STUDENT')">
-                    <a href="#" title="班级考试">
-                        <i class="fa fa-anchor"></i>
-                        <span class="nav-label">班级考试</span>
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a class="J_menuItem" th:href="@{/admin/classExam/list}">参加考试</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" th:href="@{/admin/classExam/result}" href="#">考试结果</a>
-                        </li>
-                    </ul>
-                </li>
-                <li sec:authorize="hasRole('ROLE_STUDENT')">
-                    <a class="J_menuItem" th:href="@{/admin/reviewLesson/wrongQuestion/list}" title="错题复习">
+                    <a class="J_menuItem" th:href="@{/admin/reviewLesson/wrongQuestion/list}" title="开始考试">
                         <i class="fa fa-warning"></i>
-                        <span class="nav-label">错题复习</span>
+                        <span class="nav-label">开始考试</span>
+                    </a>
+                </li>
+                <li sec:authorize="hasRole('ROLE_STUDENT')">
+                    <a class="J_menuItem" th:href="@{/admin/reviewLesson/wrongQuestion/list}" title="成绩查看">
+                        <i class="fa fa-align-center"></i>
+                        <span class="nav-label">成绩查看</span>
                     </a>
                 </li>
                 <li sec:authorize="hasRole('ROLE_TEACHER')">
-                    <a class="J_menuItem" th:href="@{/admin/classExam/init}" title="发布考试">
+                    <a class="J_menuItem" th:href="@{/admin/classExam/init}" title="试题管理">
                         <i class="fa fa-align-center"></i>
                         <span class="nav-label">发布考试</span>
                     </a>
                 </li>
                 <li sec:authorize="hasRole('ROLE_TEACHER')">
-                    <a class="J_menuItem" th:href="@{/admin/classExam/manage/list}" title="考试管理">
+                    <a class="J_menuItem" th:href="@{/admin/classExam/manage/list}" title="试卷管理">
                         <i class="fa fa-file-code-o"></i>
-                        <span class="nav-label">考试管理</span>
+                        <span class="nav-label">试卷管理</span>
+                    </a>
+                </li>
+                <li sec:authorize="hasRole('ROLE_TEACHER')">
+                    <a class="J_menuItem" th:href="@{/admin/classExam/manage/list}" title="考试查看">
+                        <i class="fa fa-file-code-o"></i>
+                        <span class="nav-label">考试查看</span>
                     </a>
                 </li>
             </ul>
